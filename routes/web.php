@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+Route::resource('users', 'UsersController');
+Route::resource('roles', 'RolesController');
+
+Route::get('/dashboard', 'HomeController@index');
